@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <!-- Avatar background circle -->
+  <circle cx="40" cy="40" r="32" fill="#d9e2ec"/>
+  
+  <!-- Person silhouette -->
+  <!-- Head -->
+  <circle cx="40" cy="31" r="10.5" fill="#FFFFFF"/>
+  <!-- Body/Shoulders clipped to avatar circle -->
+  <g clip-path="url(#avatarClip)">
+    <path d="M40 46 C 26 46, 20 54, 20 66 L 60 66 C 60 54, 54 46, 40 46 Z" fill="#FFFFFF"/>
+  </g>
+  <clipPath id="avatarClip">
+    <circle cx="40" cy="40" r="32"/>
+  </clipPath>
+
+  <!-- Verified Checkmark Badge at top-right of avatar -->
+  <circle cx="58" cy="20" r="8.5" fill="#FFFFFF" stroke="#94a3b8" stroke-width="1.2"/>
+  <path d="M54.5 20 L57 22.5 L61.5 17.5" fill="none" stroke="#1e293b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

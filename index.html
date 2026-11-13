@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coursera | Introduction to Generative AI Certificate - Devansh Bansal</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%230056D2'/><path d='M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10c3.5 0 6.6-1.8 8.4-4.5l-3.3-2.1c-1.2 1.8-3.1 3-5.1 3-3.9 0-7-3.1-7-7s3.1-7 7-7c2 0 3.9 1.2 5.1 3l3.3-2.1C22.6 7.8 19.5 6 16 6z' fill='white'/></svg>">
+  <link rel="stylesheet" href="styles.css?v=4.0">
+</head>
+<body>
+
+  <!-- Top Utility Bar (Black Bar: x=45px, h=28px) -->
+  <header class="top-utility-bar">
+    <div class="top-bar-inner">
+      <a href="#individuals" class="top-nav-link active">
+        For <strong>Individuals</strong>
+        <span class="active-underline"></span>
+      </a>
+      <a href="#businesses" class="top-nav-link">For Businesses</a>
+      <a href="#universities" class="top-nav-link">For Universities</a>
+      <a href="#governments" class="top-nav-link">For Governments</a>
+    </div>
+  </header>
+
+  <!-- Main Navigation Navbar (Logo at x=39px, Search at x=267px, Join at x=965px) -->
+  <nav class="main-navbar">
+    <div class="navbar-inner">
+      <div class="nav-left">
+        <!-- Official Coursera Vector Logo -->
+        <a href="/" class="coursera-logo-link" title="Coursera">
+          <svg class="coursera-logo-svg" viewBox="0 0 1155 164" xmlns="http://www.w3.org/2000/svg">
+            <path d="M160 82c0-45 36-81 82-81s83 36 83 81c0 44-37 80-83 80s-82-36-82-80zm125 0a43 43 0 0 0-86 0 43 43 0 0 0 86 0zm706 1c0-49 40-82 76-82 24 0 38 8 48 22l3-19h37v155h-37l-4-16c-11 12-25 19-47 19-36 0-76-31-76-79zm126 0c0-24-20-43-43-43-24 0-43 19-43 43 0 21 19 41 42 41 24 0 44-20 44-41zM946 22V4h-40v155h40V76c0-26 12-39 34-39l4 1 7-38c-21 0-36 7-45 22zm-404 0V4h-41l1 155h40V76c0-26 12-39 34-39l4 1 7-38c-21 0-36 7-45 22zM339 99V4h40v90c0 20 11 32 31 32 21 0 34-13 34-38V4h40v155h-40v-18c-10 15-25 22-47 22-36 0-58-26-58-64zm392-17c0-44 31-81 80-81 46 0 78 37 78 80l-1 13H770c4 18 20 32 43 32 14 0 29-5 38-17l28 22a80 80 0 0 1-66 31c-47 0-82-35-82-80zm118-16c-3-16-19-28-38-28s-34 11-40 27l78 1zm-262 60 36-19c6 13 18 20 35 20 15 0 21-5 21-12 0-25-85-10-85-67 0-31 28-48 62-48 26 0 49 12 61 33l-35 19c-5-11-15-17-28-17-12 0-18 5-18 12 0 24 85 9 85 67 0 30-25 48-64 48-34 0-58-11-70-36zM0 82C0 37 37 1 82 1c28 0 55 13 70 37l-34 20a43 43 0 0 0-36-19c-23 0-42 20-42 43 0 22 19 42 42 42a43 43 0 0 0 37-20l34 20A83 83 0 0 1 0 82z" fill="#0056D2" fill-rule="nonzero"/>
+          </svg>
+        </a>
+
+        <!-- Explore Dropdown (x=145px) -->
+        <button class="nav-explore-btn" id="exploreBtn" aria-expanded="false" aria-haspopup="true">
+          Explore
+          <svg class="nav-chevron-svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+            <path d="M1 1.5L4.5 4.5L8 1.5" stroke="#333333" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Degrees Link (x=206px) -->
+        <a href="#degrees" class="nav-degrees-link">Degrees</a>
+
+        <!-- Search Bar (x=267px to x=591px) -->
+        <div class="nav-search-bar">
+          <input type="text" class="search-input" id="searchInput" placeholder="What do you want to learn?" autocomplete="off">
+          <button class="search-btn" id="searchSubmit" title="Search">
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+              <path d="M7 12C9.76142 12 12 9.76142 12 7C12 4.23858 9.76142 2 7 2C4.23858 2 2 4.23858 2 7C2 9.76142 4.23858 12 7 12Z" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.5 10.5L14 14" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side (Log In at x=870px, Join for Free at x=904px to x=965px) -->
+      <div class="nav-right">
+        <a href="#login" class="nav-login-link" id="loginBtn">Log In</a>
+        <button class="nav-join-btn" id="joinBtn">Join for Free</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Explore Menu Dropdown -->
+  <div class="explore-dropdown-menu" id="exploreMenu">
+    <a href="#data-science" class="dropdown-item">Data Science</a>
+    <a href="#business" class="dropdown-item">Business</a>
+    <a href="#computer-science" class="dropdown-item">Computer Science</a>
+    <a href="#information-technology" class="dropdown-item">Information Technology</a>
+    <a href="#language-learning" class="dropdown-item">Language Learning</a>
+    <a href="#health" class="dropdown-item">Health</a>
+    <a href="#personal-development" class="dropdown-item">Personal Development</a>
+  </div>
+
+  <!-- Main Content Container (Centered 788px Width: x=114px to x=901px) -->
+  <main class="main-content-wrapper">
+    <!-- Eyebrow Subtitle (Dark, Not Blue) -->
+    <div class="course-eyebrow">Course Certificate</div>
+    
+    <!-- Main Course Title -->
+    <h1 class="course-main-title">Introduction to Generative AI</h1>
+
+    <!-- Two-Column Layout -->
+    <div class="two-column-layout">
+      
+      <!-- LEFT COLUMN (384px) -->
+      <div class="column-left">
+        
+        <!-- Learner Completion Box (Light Blue Card: x=114px to x=498px) -->
+        <section class="completion-box">
+          <div class="avatar-wrapper">
+            <img src="assets/avatar.svg" alt="Devansh Bansal Avatar" class="avatar-svg-img" width="64" height="64">
+          </div>
+          <div class="completion-details">
+            <h2 class="completed-by-text">Completed by Devansh Bansal</h2>
+            <div class="completed-date-text">May 4, 2025</div>
+            <div class="completed-duration-text">38 hours (approximately)</div>
+            <p class="verified-statement-text">
+              Devansh Bansal 's account is verified. Coursera certifies their successful completion of 
+              <a href="#course" class="verified-title-link" id="courseLink">Introduction to Generative AI</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Course Row Snippet -->
+        <section class="course-row-card">
+          <div class="course-meta-left">
+            <img src="assets/duke-logo.svg" alt="Duke University" class="duke-square-logo" width="44" height="44">
+            <div class="course-titles">
+              <h3 class="course-snippet-title">Introduction to Generative AI</h3>
+              <div class="course-provider-name">Duke University</div>
+              <div class="course-ratings-row">
+                <div class="stars-container" aria-label="4.4 out of 5 stars">
+                  <!-- Star 1 -->
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <!-- Star 2 -->
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <!-- Star 3 -->
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <!-- Star 4 -->
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <!-- Star 5 Outline -->
+                  <svg viewBox="0 0 24 24" class="star-outline-svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="rating-number">4.4 (273 ratings)</span>
+                <span class="vertical-pipe">|</span>
+                <span class="enrollment-number">33,766 already enrolled</span>
+              </div>
+            </div>
+          </div>
+          <button class="enroll-free-btn" id="enrollBtn">Enroll for Free</button>
+        </section>
+
+        <!-- What You Will Learn Section -->
+        <section class="what-you-learn-section">
+          <h3 class="section-title-heading">What you will learn</h3>
+          <div class="learn-bullets-grid">
+            <div class="learn-bullet-item">
+              <svg class="green-check-icon" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span>Learn to utilize Generative AI for automation.</span>
+            </div>
+            <div class="learn-bullet-item">
+              <svg class="green-check-icon" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span>Develop Generative AI software solutions.</span>
+            </div>
+            <div class="learn-bullet-item">
+              <svg class="green-check-icon" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+              <span>Build solutions with Prompt Engineering to enhance Generative AI output.</span>
+            </div>
+          </div>
+          <hr class="section-horizontal-divider">
+        </section>
+
+        <!-- Skills You Will Gain Section -->
+        <section class="skills-gain-section">
+          <h3 class="section-title-heading">Skills you will gain</h3>
+          <div class="skills-pill-tags">
+            <span class="skill-tag-pill">OpenAI</span>
+            <span class="skill-tag-pill">AI literacy</span>
+            <span class="skill-tag-pill">GitHub Copilot</span>
+            <span class="skill-tag-pill">Responsible AI</span>
+            <span class="skill-tag-pill">Hugging Face</span>
+            <span class="skill-tag-pill">Retrieval-Augmented Generation</span>
+            <span class="skill-tag-pill">Machine Learning</span>
+            <span class="skill-tag-pill">Python Programming</span>
+            <span class="skill-tag-pill">OpenAI API</span>
+            <span class="skill-tag-pill">Fine-tuning</span>
+            <span class="skill-tag-pill">Generative AI</span>
+            <span class="skill-tag-pill">ChatGPT</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN (388px: Certificate Preview Frame: x=513px to x=901px) -->
+      <div class="column-right">
+        <div class="certificate-display-frame" id="certFrame" title="Click to view full certificate">
+          <img src="assets/certificate.png" alt="Duke University Certificate - Introduction to Generative AI awarded to Devansh Bansal" class="certificate-image-view">
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="main-footer-section">
+    <div class="footer-inner-container">
+      <!-- Upper 4 Columns -->
+      <div class="footer-links-grid">
+        <!-- Col 1: Skills -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Skills</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#accounting">Accounting</a></li>
+            <li><a href="#ai">Artificial Intelligence (AI)</a></li>
+            <li><a href="#cybersecurity">Cybersecurity</a></li>
+            <li><a href="#data-analytics">Data Analytics</a></li>
+            <li><a href="#digital-marketing">Digital Marketing</a></li>
+            <li><a href="#hr">Human Resources (HR)</a></li>
+            <li><a href="#excel">Microsoft Excel</a></li>
+            <li><a href="#pm">Project Management</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#sql">SQL</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Professional Certificates -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Professional Certificates</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#google-ai">Google AI Certificate</a></li>
+            <li><a href="#google-cyber">Google Cybersecurity Certificate</a></li>
+            <li><a href="#google-data">Google Data Analytics Certificate</a></li>
+            <li><a href="#google-it">Google IT Support Certificate</a></li>
+            <li><a href="#google-pm">Google Project Management Certificate</a></li>
+            <li><a href="#google-ux">Google UX Design Certificate</a></li>
+            <li><a href="#ibm-ai">IBM AI Engineering Certificate</a></li>
+            <li><a href="#ibm-pm">IBM AI Product Manager Certificate</a></li>
+            <li><a href="#ibm-data">IBM Data Science Certificate</a></li>
+            <li><a href="#intuit">Intuit Academy Bookkeeping Certificate</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Courses & Specializations -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Courses &amp; Specializations</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#ai-essentials">AI Essentials Specialization</a></li>
+            <li><a href="#ai-business">AI For Business Specialization</a></li>
+            <li><a href="#ai-everyone">AI For Everyone Course</a></li>
+            <li><a href="#ai-healthcare">AI in Healthcare Specialization</a></li>
+            <li><a href="#deep-learning">Deep Learning Specialization</a></li>
+            <li><a href="#excel-skills">Excel Skills for Business Specialization</a></li>
+            <li><a href="#financial-markets">Financial Markets Course</a></li>
+            <li><a href="#machine-learning">Machine Learning Specialization</a></li>
+            <li><a href="#prompt-engineering">Prompt Engineering for ChatGPT Course</a></li>
+            <li><a href="#python-everybody">Python for Everybody Specialization</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Career Resources -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Career Resources</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#career-aptitude">Career Aptitude Test</a></li>
+            <li><a href="#capm-req">CAPM Certification Requirements</a></li>
+            <li><a href="#comptia-a">CompTIA A+ Certification Requirements</a></li>
+            <li><a href="#comptia-sec">CompTIA Security+ Certification Requirements</a></li>
+            <li><a href="#it-certs">Essential IT Certifications</a></li>
+            <li><a href="#high-income">High-Income Skills to Learn</a></li>
+            <li><a href="#learn-ai">How to Learn Artificial Intelligence</a></li>
+            <li><a href="#pmp-req">PMP Certification Requirements</a></li>
+            <li><a href="#popular-cyber">Popular Cybersecurity Certifications</a></li>
+            <li><a href="#learning-story">Share your Coursera learning story</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Lower 4 Columns -->
+      <div class="footer-links-grid footer-bottom-row">
+        <!-- Col 1: Coursera -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Coursera</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#coursera-plus">Coursera Plus</a></li>
+            <li><a href="#prof-certs">Professional Certificates</a></li>
+            <li><a href="#degrees">Degrees</a></li>
+            <li><a href="#for-enterprise">For Enterprise</a></li>
+            <li><a href="#for-government">For Government</a></li>
+            <li><a href="#for-campus">For Campus</a></li>
+            <li><a href="#become-partner">Become a Partner</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Community -->
+        <div class="footer-column">
+          <h4 class="footer-heading">Community</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#learners">Learners</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#beta-testers">Beta Testers</a></li>
+            <li><a href="#free-courses">Free Courses</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#podcast">The Coursera Podcast</a></li>
+            <li><a href="#tech-blog">Tech Blog</a></li>
+            <li><a href="#social-impact">Social Impact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: More -->
+        <div class="footer-column">
+          <h4 class="footer-heading">More</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#press">Press</a></li>
+            <li><a href="#investors">Investors</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#help">Help</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#directory">Directory</a></li>
+            <li><a href="#affiliates">Affiliates</a></li>
+            <li><a href="#modern-slavery">Modern Slavery Statement</a></li>
+            <li><a href="#cookies">Cookies Preference Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Badges -->
+        <div class="footer-column store-badges-column">
+          <a href="https://apps.apple.com/app/coursera-online-courses/id736535961" target="_blank" rel="noopener noreferrer" class="app-badge-link" title="Download on the App Store">
+            <img src="assets/app-store.svg" alt="Download on the App Store" class="app-badge-svg" width="135" height="40">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=org.coursera.android" target="_blank" rel="noopener noreferrer" class="app-badge-link" title="Get it on Google Play">
+            <img src="assets/google-play.svg" alt="GET IT ON Google Play" class="app-badge-svg" width="135" height="40">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Certificate Zoom Lightbox Modal -->
+  <div class="modal-overlay-backdrop" id="certModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog-box">
+      <button class="modal-close-x" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <h3 id="modalTitle" class="modal-header-title">Duke University Certificate Preview</h3>
+      <p class="modal-header-subtitle">Introduction to Generative AI • Issued May 4, 2025 to Devansh Bansal</p>
+      
+      <img src="assets/certificate.png" alt="Full Duke Certificate" class="modal-cert-img" id="modalCertImg">
+      
+      <div class="modal-footer-actions">
+        <div class="modal-verify-url">
+          Verification URL: <strong>https://coursera.org/verify/VT7S69XKDPM4</strong>
+        </div>
+        <div class="modal-btn-group">
+          <button class="modal-action-btn secondary" id="copyVerifyBtn">Copy Verification Link</button>
+          <button class="modal-action-btn primary" id="printCertBtn">Print / Save PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coursera Auth Modal (Log in or create account) -->
+  <div class="auth-modal-backdrop" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="auth-modal-card">
+      <button class="auth-modal-close" id="authCloseBtn" aria-label="Close dialog">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L13 13M1 13L13 1" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      
+      <h2 id="authModalTitle" class="auth-modal-title">Log in or create account</h2>
+      <p class="auth-modal-subtitle">Learn on your own time from top universities and businesses.</p>
+      
+      <form id="authForm" onsubmit="return false;">
+        <div class="auth-form-group">
+          <label for="authEmailInput" class="auth-form-label">Email <span class="auth-required-star">*</span></label>
+          <input type="email" id="authEmailInput" class="auth-input-email" placeholder="name@email.com" required autocomplete="email">
+        </div>
+        
+        <button type="submit" class="auth-btn-continue" id="authContinueBtn">Continue</button>
+      </form>
+      
+      <div class="auth-divider-row">
+        <div class="auth-divider-line"></div>
+        <span class="auth-divider-text">or</span>
+        <div class="auth-divider-line"></div>
+      </div>
+      
+      <div class="auth-social-buttons">
+        <button class="auth-social-btn" id="googleAuthBtn" type="button">
+          <svg class="auth-btn-icon" width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.64 9.2045c0-.6381-.0573-1.2518-.1636-1.8409H9v3.4814h4.8436c-.2086 1.125-.8427 2.0782-1.7959 2.7164v2.2581h2.9087c1.7018-1.5668 2.6836-3.874 2.6836-6.615z" fill="#4285F4"/>
+            <path d="M9 18c2.43 0 4.4673-.806 5.9564-2.1805l-2.9087-2.2581c-.806.54-1.8368.859-3.0477.859-2.344 0-4.3282-1.5831-5.036-3.7104H.9573v2.3318C2.4382 15.9832 5.4818 18 9 18z" fill="#34A853"/>
+            <path d="M3.964 10.71c-.18-.54-.2822-1.1168-.2822-1.71s.1023-1.17.2823-1.71V4.9582H.9573A8.9965 8.9965 0 0 0 0 9c0 1.4523.3477 2.8268.9573 4.0418L3.964 10.71z" fill="#FBBC05"/>
+            <path d="M9 3.5795c1.3214 0 2.5077.4541 3.4405 1.346l2.5813-2.5814C13.4632.9286 11.426 0 9 0 5.4818 0 2.4382 2.0168.9573 4.9582L3.964 7.29C4.6718 5.1627 6.656 3.5795 9 3.5795z" fill="#EA4335"/>
+          </svg>
+          Continue with Google
+        </button>
+        
+        <button class="auth-social-btn" id="facebookAuthBtn" type="button">
+          <svg class="auth-btn-icon" width="22" height="22" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Continue with Facebook
+        </button>
+        
+        <button class="auth-social-btn" id="appleAuthBtn" type="button">
+          <img src="assets/apple-logo.png" alt="Apple" class="auth-btn-icon" width="18" height="22">
+          Continue with Apple
+        </button>
+      </div>
+      
+      <div class="auth-org-row">
+        <a href="#organization" class="auth-org-link">Sign up with your organization</a>
+      </div>
+      
+      <div class="auth-legal-section">
+        <p class="auth-legal-text">
+          I accept Coursera's <a href="#terms" class="auth-legal-link">Terms of Use</a> and <a href="#privacy" class="auth-legal-link">Privacy Notice</a>. Having trouble logging in? <a href="#help" class="auth-legal-link">Learner help center</a>
+        </p>
+        <p class="auth-legal-text">
+          This site is protected by reCAPTCHA Enterprise and the Google <a href="#privacy" class="auth-legal-link">Privacy Policy</a> and <a href="#terms" class="auth-legal-link">Terms of Service</a> apply.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="action-toast-banner" id="toastNotice">Copied verification link to clipboard!</div>
+
+  <script src="script.js?v=4.0"></script>
+</body>
+</html>

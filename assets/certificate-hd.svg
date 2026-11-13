@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="100%" height="100%">
+  <defs>
+    <!-- Background paper subtle gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#fcfcfc"/>
+      <stop offset="100%" stop-color="#f8f9fa"/>
+    </linearGradient>
+
+    <!-- Ribbon gradient -->
+    <linearGradient id="ribbonGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce4f0"/>
+      <stop offset="100%" stop-color="#cfdbe9"/>
+    </linearGradient>
+
+    <!-- Seal gradient -->
+    <radialGradient id="sealGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#edf2f9"/>
+      <stop offset="85%" stop-color="#d5e0ee"/>
+      <stop offset="100%" stop-color="#c1d0e4"/>
+    </radialGradient>
+
+    <!-- Corner ornament pattern -->
+    <g id="cornerOrnament">
+      <path d="M 0 0 L 14 0 L 14 2 L 2 2 L 2 14 L 0 14 Z" fill="#9ca3af"/>
+      <circle cx="6" cy="6" r="1.5" fill="#9ca3af"/>
+    </g>
+  </defs>
+
+  <!-- Certificate Background -->
+  <rect width="900" height="550" fill="url(#bgGrad)"/>
+
+  <!-- Outer Border Frame -->
+  <rect x="22" y="22" width="856" height="506" fill="none" stroke="#9ca3af" stroke-width="1.4"/>
+  <!-- Inner Fine Border Frame -->
+  <rect x="28" y="28" width="844" height="494" fill="none" stroke="#cbd5e1" stroke-width="0.8"/>
+
+  <!-- Corner Ornaments -->
+  <use href="#cornerOrnament" x="24" y="24"/>
+  <use href="#cornerOrnament" x="876" y="24" transform="rotate(90 876 24)"/>
+  <use href="#cornerOrnament" x="876" y="526" transform="rotate(180 876 526)"/>
+  <use href="#cornerOrnament" x="24" y="526" transform="rotate(270 24 526)"/>
+
+  <!-- ================= TOP LEFT: DUKE UNIVERSITY LOGO ================= -->
+  <g transform="translate(60, 56)">
+    <!-- Duke text in Garamond -->
+    <text x="0" y="44" font-family="'Garamond', 'Georgia', 'Times New Roman', serif" font-size="44" font-weight="bold" fill="#012169" letter-spacing="-0.5px">Duke</text>
+    <!-- UNIVERSITY text -->
+    <text x="1" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#012169" letter-spacing="3.2px">UNIVERSITY</text>
+  </g>
+
+  <!-- ================= TOP RIGHT: RIBBON BANNER & COURSERA SEAL ================= -->
+  <g transform="translate(680, 22)">
+    <!-- Ribbon shape -->
+    <path d="M 0 0 L 80 0 L 80 180 L 40 210 L 0 180 Z" fill="url(#ribbonGrad)"/>
+    <!-- Subtle ribbon border -->
+    <path d="M 0 0 L 80 0 L 80 180 L 40 210 L 0 180 Z" fill="none" stroke="#b4c4d7" stroke-width="0.8"/>
+
+    <!-- "COURSE CERTIFICATE" text -->
+    <text x="40" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#374151" text-anchor="middle" letter-spacing="1.8px">COURSE</text>
+    <text x="40" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" fill="#374151" text-anchor="middle" letter-spacing="1.8px">CERTIFICATE</text>
+
+    <!-- Official Coursera Round Seal -->
+    <g transform="translate(40, 118)">
+      <!-- Outer circle -->
+      <circle cx="0" cy="0" r="32" fill="url(#sealGrad)" stroke="#92a8c5" stroke-width="1.2"/>
+      <!-- Inner dashed circle -->
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#718ba8" stroke-width="0.8" stroke-dasharray="2 2"/>
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#92a8c5" stroke-width="0.6"/>
+
+      <!-- Circular text: EDUCATION FOR EVERYONE -->
+      <path id="sealTextPathTop" d="M -21 0 A 21 21 0 0 1 21 0" fill="none"/>
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="4.2" font-weight="700" fill="#2d3748" letter-spacing="1.2px">
+        <textPath href="#sealTextPathTop" startOffset="50%" text-anchor="middle">EDUCATION FOR EVERYONE</textPath>
+      </text>
+
+      <!-- Circular text: COURSERA -->
+      <path id="sealTextPathBottom" d="M -19 0 A 19 19 0 0 0 19 0" fill="none"/>
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="5" font-weight="800" fill="#0056D2" letter-spacing="1.5px">
+        <textPath href="#sealTextPathBottom" startOffset="50%" text-anchor="middle">COURSERA</textPath>
+      </text>
+
+      <!-- Center Coursera Icon -->
+      <g transform="translate(0, 0) scale(0.65)">
+        <path d="M 0 -8 C 4.4 -8 8 -4.4 8 0 C 8 4.4 4.4 8 0 8 C -4.4 8 -8 4.4 -8 0 C -8 -4.4 -4.4 -8 0 -8 Z" fill="#0056D2" opacity="0.12"/>
+        <circle cx="0" cy="0" r="5" fill="#0056D2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= BODY CONTENT ================= -->
+  <!-- Date -->
+  <text x="60" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#4b5563">May 4, 2025</text>
+
+  <!-- Recipient Name -->
+  <text x="60" y="218" font-family="'Garamond', 'Georgia', 'Playfair Display', serif" font-size="34" font-weight="600" fill="#111827">Devansh Bansal</text>
+
+  <!-- Completion Statement -->
+  <text x="60" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-style="italic" fill="#4b5563">has successfully completed</text>
+
+  <!-- Course Title -->
+  <text x="60" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" fill="#111827">Introduction to Generative AI</text>
+
+  <!-- Course Provider Authorization -->
+  <text x="60" y="304" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#4b5563">an online course authorized by Duke University and offered through Coursera</text>
+
+  <!-- ================= BOTTOM LEFT: SIGNATURES ================= -->
+  <!-- Signature 1: Noah Gift -->
+  <g transform="translate(60, 370)">
+    <!-- Handwritten Signature Path -->
+    <path d="M 0 10 Q 15 -12 25 5 Q 35 15 45 -4 Q 55 -15 62 8 Q 70 2 85 4" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Line -->
+    <line x1="0" y1="18" x2="160" y2="18" stroke="#cbd5e1" stroke-width="0.8"/>
+    <!-- Instructor Title -->
+    <text x="0" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">Noah Gift, Executive in Residence and Founder of Pragmatic</text>
+    <text x="0" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">AI Labs,</text>
+    <text x="0" y="49" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">Adjunct Assistant Professor in the Pratt School of</text>
+    <text x="0" y="59" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">Engineering</text>
+  </g>
+
+  <!-- Signature 2: Alfredo Deza -->
+  <g transform="translate(250, 370)">
+    <!-- Handwritten Signature Path -->
+    <path d="M 0 8 Q 12 -10 22 2 Q 30 12 40 -8 Q 48 5 65 2 Q 75 0 80 6" fill="none" stroke="#1f2937" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Line -->
+    <line x1="0" y1="18" x2="160" y2="18" stroke="#cbd5e1" stroke-width="0.8"/>
+    <!-- Instructor Title -->
+    <text x="0" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">Alfredo Deza, Adjunct Assistant Professor in the Pratt School</text>
+    <text x="0" y="39" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#4b5563">of Engineering</text>
+  </g>
+
+  <!-- ================= BOTTOM RIGHT: VERIFICATION ================= -->
+  <g transform="translate(560, 410)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500" fill="#6b7280">Verify at:</text>
+    <text x="0" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#0056D2" text-decoration="underline">https://coursera.org/verify/VT7S69XKDPM4</text>
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#6b7280">Coursera has confirmed the identity of this individual and their</text>
+    <text x="0" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="400" fill="#6b7280">participation in the course.</text>
+  </g>
+
+  <!-- ================= BOTTOM FOOTNOTE ================= -->
+  <g transform="translate(450, 498)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.8" font-weight="400" fill="#9ca3af" text-anchor="middle">
+      This certificate attests to the learner's completion of an online course / project delivered via Coursera. It does not confer an academic credential or verify credit.
+    </text>
+    <text x="0" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.8" font-weight="400" fill="#9ca3af" text-anchor="middle">
+      Unless explicitly stated by an accredited institution or partner, recognition of this learning toward their own programs or credentials.
+    </text>
+  </g>
+</svg>
+
