@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Copy Verification URL
   if (copyVerifyBtn) {
     copyVerifyBtn.addEventListener('click', () => {
-      const verifyUrl = 'https://coursera.org/verify/VT7S69XKDPM4';
+      const verifyUrl = 'https://coursera.org/verify/775601XXDEM4';
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(verifyUrl).then(() => {
           showToast('Copied verification URL to clipboard!');
